@@ -1,0 +1,35 @@
+ # 1. 组件的生命周期及勾子
+	第一次初始化显示: ReactDOM.render(<Xxx/>, containDom)
+		constructor()
+		componentWillMount() : 将要插入回调
+		render() : 用于插入虚拟DOM回调
+		componentDidMount() : 已经插入回调
+	每次更新state: this.setState({})
+	    componentWillReceiveProps(): 接收父组件新的属性
+	    componentWillUpdate() : 将要更新回调
+	    render() : 更新(重新渲染)
+	    componentDidUpdate() : 已经更新回调
+	删除组件: ReactDOM.unmountComponentAtNode(div): 移除组件
+		componentWillUnmount() : 组件将要被移除回调
+# 2. 说说脚手架的理解
+	用来创建基于某个特定库(react/vue)的模板项目的工具包
+	全局下载脚手架后, 就会多出一个命令, 通过命令就可以创建项目
+	创建出的项目已经
+# 3. package.json的结构
+	{
+		"name": "react-demo",
+		"version": "1.0.0",
+		"scripts": {
+			
+		},
+		dependencies: {},
+		devDependencies: {}
+	}
+# 4. 区别2种类型的容器
+	1). 数组容器: 用来保存有序的多个数据(如列表数据), 数据的标识是下标, 我们通过下标来操作对应的数据
+	2). 对象容器: 用来保存无序的多个数据, 多个数据的标识是属性名, 我们通过属性名来操作属性值数据
+
+# 5. 关于设计state的3个问题
+	1). 类型: 数组
+	2). 名称: todos
+	3). 保存在哪个组件? 看是哪个组件需要还是哪些组件需要(共同的父组件)
